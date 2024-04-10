@@ -3,7 +3,7 @@ import "../../App.css";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   console.log(user);
   const links = (
     <>
@@ -21,6 +21,10 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogOut = () => {
+    logOut();
+  };
 
   return (
     <div className="navbar absolute z-10 lg:px-10 bg-black bg-opacity-40 blured">
@@ -61,13 +65,17 @@ const Navbar = () => {
           className="rounded-full mx-2"
           height={45}
           width={45}
-          src="https://i.ibb.co/5Gbh4qw/300px.jpg"
+          src={user ? user.photoURL : "user.png"}
           alt=""
         />
         {user ? (
-          <a className="btn">Log out</a>
+          <a onClick={handleLogOut} className="btn">
+            Log out
+          </a>
         ) : (
-          <Link to={"/login"}>Login</Link>
+          <Link to={"/login"}>
+            <button className="btn ">Login</button>
+          </Link>
         )}
       </div>
     </div>
