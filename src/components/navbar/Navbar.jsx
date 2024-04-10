@@ -13,9 +13,14 @@ const Navbar = () => {
       <li>
         <NavLink to={"/updateProfile"}>Update profile</NavLink>
       </li>
-      <li>
-        <NavLink to={"/profile"}>User profile</NavLink>
-      </li>
+      {user ? (
+        <li>
+          <NavLink to={"/profile"}>User profile</NavLink>
+        </li>
+      ) : (
+        ""
+      )}
+
       <li>
         <NavLink to={"/register"}>Register</NavLink>
       </li>
@@ -61,13 +66,19 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <img
-          className="rounded-full mx-2"
-          height={45}
-          width={45}
-          src={user ? user.photoURL : "user.png"}
-          alt=""
-        />
+        <div
+          className="tooltip tooltip-bottom"
+          data-tip={user && user.displayName}
+        >
+          <img
+            className={`rounded-full mx-2`}
+            height={45}
+            width={45}
+            src={user ? user.photoURL : "user.png"}
+            alt=""
+          />
+        </div>
+
         {user ? (
           <a onClick={handleLogOut} className="btn">
             Log out
