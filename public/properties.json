@@ -1,0 +1,133 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Luxurious Beachfront Villa",
+    "segment_name": "Villa",
+    "description": "Experience the epitome of luxury living with this stunning beachfront villa. Enjoy breathtaking ocean views from every room, private beach access, and world-class amenities.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "5,000 sq ft",
+    "location": "Malibu, California",
+    "facilities": ["Beachfront", "Infinity Pool", "Spa", "Home Theater"],
+    "image": "https://i.ibb.co/HBxBLG1/1.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Exquisite Penthouse with City Views",
+    "segment_name": "Penthouse",
+    "description": "Live in the lap of luxury with this penthouse offering panoramic views of the city skyline. This meticulously designed residence features high-end finishes, expansive living spaces, and exclusive amenities.",
+    "price": "$3,500,000",
+    "status": "sale",
+    "area": "3,000 sq ft",
+    "location": "Manhattan, New York",
+    "facilities": [
+      "Floor-to-Ceiling Windows",
+      "Private Terrace",
+      "Gourmet Kitchen",
+      "Fitness Center"
+    ],
+    "image": "https://i.ibb.co/5rbmm8k/2.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Secluded Private Island Retreat",
+    "segment_name": "Private Island",
+    "description": "Escape to your own private paradise with this exclusive island retreat. Surrounded by crystal-clear waters and pristine beaches, this sanctuary offers ultimate privacy and luxury.",
+    "price": "$10,000,000",
+    "status": "sale",
+    "area": "10 acres",
+    "location": "Fiji",
+    "facilities": [
+      "Private Beach",
+      "Luxury Accommodation",
+      "Helipad",
+      "Infinity Pool"
+    ],
+    "image": "https://i.ibb.co/nkPz3PJ/3.webp"
+  },
+  {
+    "id": 4,
+    "estate_title": "Majestic Oceanfront Mansion",
+    "segment_name": "Mansion",
+    "description": "Indulge in grandeur with this majestic oceanfront mansion. Boasting unparalleled ocean views, lavish interiors, and sprawling grounds, this estate exemplifies luxury living at its finest.",
+    "price": "$15,000,000",
+    "status": "sale",
+    "area": "15,000 sq ft",
+    "location": "Miami Beach, Florida",
+    "facilities": [
+      "Oceanfront Terrace",
+      "Private Dock",
+      "Home Gym",
+      "Wine Cellar"
+    ],
+    "image": "https://i.ibb.co/GPXYSyp/4.webp"
+  },
+  {
+    "id": 5,
+    "estate_title": "Exclusive Resort & Spa",
+    "segment_name": "Resort",
+    "description": "Indulge in luxury and relaxation at this exclusive resort & spa. Nestled amidst tropical landscapes, this retreat offers world-class amenities, gourmet dining, and personalized service.",
+    "price": "$20,000,000",
+    "status": "sale",
+    "area": "20 acres",
+    "location": "Bora Bora, French Polynesia",
+    "facilities": [
+      "Spa & Wellness Center",
+      "Private Villas",
+      "Infinity Pools",
+      "Fine Dining Restaurants"
+    ],
+    "image": "https://i.ibb.co/2d0Tgrr/5.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Stunning Cliffside Mansion",
+    "segment_name": "Mansion",
+    "description": "Perched atop a cliff overlooking the ocean, this stunning mansion offers unparalleled views and luxurious living. With spacious interiors, infinity pool, and lush gardens, it's a retreat like no other.",
+    "price": "$12,500,000",
+    "status": "rent",
+    "area": "8,000 sq ft",
+    "location": "Big Sur, California",
+    "facilities": [
+      "Cliffside Terrace",
+      "Home Theater",
+      "Gourmet Kitchen",
+      "Gym"
+    ],
+    "image": "https://i.ibb.co/yfSJ37Q/6.webp"
+  },
+  {
+    "id": 7,
+    "estate_title": "Elegant Waterfront Villa",
+    "segment_name": "Villa",
+    "description": "Experience waterfront living at its finest with this elegant villa. Boasting stunning views, private dock, and luxurious amenities, it's the perfect retreat for discerning buyers.",
+    "price": "$6,800,000",
+    "status": "rent",
+    "area": "6,000 sq ft",
+    "location": "Amalfi Coast, Italy",
+    "facilities": [
+      "Waterfront Terrace",
+      "Boat Dock",
+      "Swimming Pool",
+      "Outdoor Kitchen"
+    ],
+    "image": "https://i.ibb.co/zhSfXQ0/7.webp"
+  },
+  {
+    "id": 8,
+    "estate_title": "Luxury Mountain Retreat",
+    "segment_name": "Resort",
+    "description": "Escape to the mountains with this luxurious retreat. Surrounded by pristine nature, this resort offers upscale accommodations, outdoor activities, and breathtaking views.",
+    "price": "$7,000,000",
+    "status": "rent",
+    "area": "50 acres",
+    "location": "Aspen, Colorado",
+    "facilities": [
+      "Ski-in/Ski-out Access",
+      "Mountain Spa",
+      "Fine Dining Restaurants",
+      "Hiking Trails"
+    ],
+    "image": "https://i.ibb.co/TkWmRNc/8.webp"
+  }
+]
