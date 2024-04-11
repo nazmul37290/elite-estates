@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaFacebook } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import "../../App.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { login } = useContext(AuthContext);
+  const { login, signInWithGoogle } = useContext(AuthContext);
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -23,6 +24,16 @@ const Login = () => {
         console.log(error);
       });
     console.log(email, password);
+  };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div className="hero min-h-screen bg-[url('./bg.jpg')]">
@@ -93,6 +104,19 @@ const Login = () => {
               </Link>
             </span>
           </p>
+          <div className="text-center space-y-2 text-white mb-2">
+            <p className="text-white text-xl">or</p>
+            <p>Sign up with</p>
+            <button
+              onClick={handleGoogleLogin}
+              className="btn btn-circle text-xl mr-2"
+            >
+              <FcGoogle></FcGoogle>
+            </button>
+            <button className="btn btn-circle text-xl text-blue-600">
+              <FaFacebook></FaFacebook>
+            </button>
+          </div>
         </div>
       </div>
     </div>

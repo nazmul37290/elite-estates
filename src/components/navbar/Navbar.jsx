@@ -70,13 +70,15 @@ const Navbar = () => {
           className="tooltip tooltip-bottom"
           data-tip={user && user.displayName}
         >
-          <img
-            className={`rounded-full mx-2`}
-            height={45}
-            width={45}
-            src={user ? user.photoURL : "user.png"}
-            alt=""
-          />
+          {user && (
+            <img
+              className={`rounded-full mx-2`}
+              height={45}
+              width={45}
+              src={user.photoURL}
+              alt=""
+            />
+          )}
         </div>
 
         {user ? (
