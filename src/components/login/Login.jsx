@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaFacebook } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaFacebook, FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import "../../App.css";
 import { useContext, useState } from "react";
@@ -7,7 +7,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { login, signInWithGoogle } = useContext(AuthContext);
+  const { login, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -28,6 +28,16 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleGithubLogin = () => {
+    signInWithGithub()
       .then((result) => {
         console.log(result.user);
       })
@@ -113,8 +123,11 @@ const Login = () => {
             >
               <FcGoogle></FcGoogle>
             </button>
-            <button className="btn btn-circle text-xl text-blue-600">
-              <FaFacebook></FaFacebook>
+            <button
+              onClick={handleGithubLogin}
+              className="btn btn-circle text-xl text-black"
+            >
+              <FaGithub></FaGithub>
             </button>
           </div>
         </div>
