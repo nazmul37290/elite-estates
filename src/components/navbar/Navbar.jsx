@@ -10,20 +10,18 @@ const Navbar = () => {
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      <li>
-        <NavLink to={"/updateProfile"}>Update profile</NavLink>
-      </li>
+
       {user ? (
         <li>
-          <NavLink to={"/profile"}>User profile</NavLink>
+          <NavLink to={"/updateProfile"}>Update profile</NavLink>
         </li>
       ) : (
         ""
       )}
 
-      <li>
+      {/* <li>
         <NavLink to={"/register"}>Register</NavLink>
-      </li>
+      </li> */}
     </>
   );
 
@@ -71,13 +69,13 @@ const Navbar = () => {
           data-tip={user && user.displayName}
         >
           {user && (
-            <img
-              className={`rounded-full mx-2`}
-              height={45}
-              width={45}
-              src={user.photoURL}
-              alt=""
-            />
+            <div className="h-11 w-11 mr-4">
+              <img
+                className={`rounded-full w-full h-full mx-2`}
+                src={user.photoURL}
+                alt=""
+              />
+            </div>
           )}
         </div>
 

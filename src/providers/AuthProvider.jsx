@@ -39,7 +39,6 @@ const AuthProvider = ({ children }) => {
 
   // update profile
   const updateUserProfile = (name, photoUrl) => {
-    setLoader(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photoUrl,
@@ -77,6 +76,7 @@ const AuthProvider = ({ children }) => {
     signInWithGoogle,
     signInWithGithub,
     loader,
+    setLoader,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

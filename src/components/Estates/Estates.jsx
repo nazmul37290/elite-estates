@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
@@ -13,6 +14,7 @@ const Estates = ({ estates }) => {
           return (
             <>
               <div
+                key={i}
                 data-aos={i % 2 == 0 ? "slide-right" : "slide-left"}
                 className="h-[350px] w-auto border-black border mt-10 rounded-xl grid grid-cols-5"
               >
@@ -52,3 +54,7 @@ const Estates = ({ estates }) => {
 };
 
 export default Estates;
+
+Estates.propTypes = {
+  estates: PropTypes.array,
+};
