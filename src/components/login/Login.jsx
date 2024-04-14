@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaFacebook, FaGithub } from "react-icons/fa";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import "../../App.css";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const [loginError, setLoginError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const { login, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -16,33 +20,33 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     login(email, password)
+      // eslint-disable-next-line no-unused-vars
       .then((result) => {
-        console.log(result.user);
+        navigate(location.state ? location.state : "/");
         e.target.reset();
       })
       .catch((error) => {
-        console.log(error);
+        setLoginError(error.message);
       });
-    console.log(email, password);
   };
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        setLoginError(error.message);
       });
   };
 
   const handleGithubLogin = () => {
     signInWithGithub()
       .then((result) => {
-        console.log(result.user);
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        setLoginError(error.message);
       });
   };
   return (
@@ -100,6 +104,7 @@ const Login = () => {
                 </a>
               </label>
             </div>
+            <p className="text-red-500 font-semibold">{loginError}</p>
             <div className="form-control mt-6">
               <button className="btn btn-primary text-lg">Login</button>
             </div>

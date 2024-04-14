@@ -1,13 +1,17 @@
-import { useContext } from "react";
-import { AuthContext } from "../../providers/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 import Slider from "../slider/Slider";
+import Estates from "../Estates/Estates";
+import "../../App.css";
 
 const Home = () => {
-  const { a } = useContext(AuthContext);
-  console.log(a);
+  const data = useLoaderData();
+
   return (
-    <div>
+    <div className="">
       <Slider></Slider>
+      <div className="max-w-7xl mx-auto">
+        <Estates estates={data}></Estates>
+      </div>
     </div>
   );
 };

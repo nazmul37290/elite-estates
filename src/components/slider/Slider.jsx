@@ -57,19 +57,19 @@ const Slider = () => {
             <div className="slider-description hidden md:block md:left-[40%] lg:left-[20%]  text-gray-200">
               <div className="p-10">
                 <h2 className="text-3xl  font-bold mb-5 ">
-                  Luxurious Beachfront Villa
+                  Exquisite Penthouse with City Views
                 </h2>
                 <p className="text-xl  font-bold">
-                  Location: <span className="">Malibu, California</span>
+                  Location: <span className="">Manhattan, New York</span>
                 </p>
                 <p className="font-bold text-xl">Facilities:</p>
                 <ul className=" text-xl ">
-                  <li>Beach Front</li>
-                  <li>Infinity Pool</li>
-                  <li>Spa</li>
+                  <li>Floor-to-Ceiling Windows</li>
+                  <li>Private Terrace</li>
+                  <li>Gourmet Kitchen</li>
                 </ul>
                 <p className="font-bold text-2xl bg-white bg-opacity-50 rounded-full mt-4 p-2 text-center">
-                  $5,000,000
+                  $3,500,000
                 </p>
               </div>
             </div>
@@ -80,19 +80,19 @@ const Slider = () => {
             <div className="hidden md:block slider-description  md:left-[40%] lg:left-[20%]  text-gray-200">
               <div className="p-10">
                 <h2 className="text-3xl  font-bold mb-5 ">
-                  Luxurious Beachfront Villa
+                  Secluded Private Island Retreat
                 </h2>
                 <p className="text-xl  font-bold">
-                  Location: <span className="">Malibu, California</span>
+                  Location: <span className="">Fiji</span>
                 </p>
                 <p className="font-bold text-xl">Facilities:</p>
                 <ul className="text-xl ">
-                  <li>Beach Front</li>
+                  <li>Private Beach</li>
+                  <li>Luxury Accommodation</li>
                   <li>Infinity Pool</li>
-                  <li>Spa</li>
                 </ul>
                 <p className="font-bold text-2xl bg-white bg-opacity-50 rounded-full mt-4 p-2 text-center">
-                  $5,000,000
+                  $10,000,000
                 </p>
               </div>
             </div>

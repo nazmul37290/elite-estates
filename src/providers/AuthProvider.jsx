@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import {
   GithubAuthProvider,
@@ -12,16 +13,19 @@ import {
 import { auth } from "../firebase/firebase.config";
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
+  const [loader, setLoader] = useState(true);
   const [user, setUser] = useState(null);
 
   //function for create user using email and password
   const createUserUsingEmail = (email, password) => {
+    setLoader(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // function for google sign in
   const googleProvider = new GoogleAuthProvider();
   const signInWithGoogle = () => {
+    setLoader(true);
     return signInWithPopup(auth, googleProvider);
   };
 
@@ -29,11 +33,13 @@ const AuthProvider = ({ children }) => {
 
   const githubProvider = new GithubAuthProvider();
   const signInWithGithub = () => {
+    setLoader(true);
     return signInWithPopup(auth, githubProvider);
   };
 
   // update profile
   const updateUserProfile = (name, photoUrl) => {
+    setLoader(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photoUrl,
@@ -41,6 +47,7 @@ const AuthProvider = ({ children }) => {
   };
   // login function
   const login = (email, password) => {
+    setLoader(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -53,6 +60,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unSubscriber = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoader(false);
     });
 
     return () => {
@@ -68,6 +76,7 @@ const AuthProvider = ({ children }) => {
     login,
     signInWithGoogle,
     signInWithGithub,
+    loader,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
@@ -75,3 +84,7 @@ const AuthProvider = ({ children }) => {
 };
 
 export default AuthProvider;
+
+AuthProvider.propTypes = {
+  children: PropTypes.node,
+};
