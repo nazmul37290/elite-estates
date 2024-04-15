@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-gray-400 text-white text-lg mt-10 rounded">
+      <footer className="footer footer-center p-10 bg-gray-400 text-black text-lg mt-10 rounded">
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
@@ -48,7 +48,7 @@ const Footer = () => {
         <aside>
           <p>
             Copyright © 2024 - All right reserved by
-            <span className="text-black font-bold">Elite Estates</span>
+            <span className="text-black font-bold"> Elite Estates</span>
           </p>
         </aside>
       </footer>
