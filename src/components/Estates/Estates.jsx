@@ -16,16 +16,16 @@ const Estates = ({ estates }) => {
               <div
                 key={i}
                 data-aos={i % 2 == 0 ? "slide-right" : "slide-left"}
-                className="h-[350px] w-auto border-black border mt-10 rounded-xl grid grid-cols-5"
+                className="md:h-[280px] lg:h-[350px] mx-5 w-auto border-black border mt-10 rounded-xl grid md:gap-5 grid-cols-1 md:grid-cols-3"
               >
-                <div className="h-[350px] col-span-2 w-[450px]">
+                <div className="md:h-[280px] lg:h-[350px] col-span-1 w-auto">
                   <img
                     className="w-full rounded-lg h-full"
                     src={image}
                     alt=""
                   />
                 </div>
-                <div className="p-10 col-span-3 space-y-4">
+                <div className="p-10 col-span-2 space-y-4">
                   <h2 className="text-base lg:text-3xl uppercase font-bold">
                     Title: <span>{estate_title}</span>
                   </h2>

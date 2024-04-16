@@ -31,7 +31,7 @@ const Slider = () => {
       >
         <SwiperSlide>
           <div className="slider slider1 relative">
-            <div className=" slider-description hidden md:block md:left-[40%] lg:left-[20%]  text-gray-200">
+            <div className=" slider-description hidden md:block md:left-[40%] lg:left-[30%]  text-gray-200">
               <div className="p-10">
                 <h2 className="text-3xl  font-bold mb-5 ">
                   Luxurious Beachfront Villa
@@ -54,7 +54,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slider slider2">
-            <div className="slider-description hidden md:block md:left-[40%] lg:left-[20%]  text-gray-200">
+            <div className="slider-description hidden md:block md:left-[40%] lg:left-[30%]  text-gray-200">
               <div className="p-10">
                 <h2 className="text-3xl  font-bold mb-5 ">
                   Exquisite Penthouse with City Views
@@ -77,7 +77,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slider slider3">
-            <div className="hidden md:block slider-description  md:left-[40%] lg:left-[20%]  text-gray-200">
+            <div className="hidden md:block slider-description  md:left-[40%] lg:left-[30%]  text-gray-200">
               <div className="p-10">
                 <h2 className="text-3xl  font-bold mb-5 ">
                   Secluded Private Island Retreat
