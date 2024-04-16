@@ -68,9 +68,9 @@ const Register = () => {
       <Helmet>
         <title>EliteEstates | Register</title>
       </Helmet>
-      <div className="hero min-h-screen bg-[url('/bg.jpg')]">
+      <div className="hero min-h-screen  bg-[url('/bg.jpg')]">
         <div className="hero-content w-full  flex-col ">
-          <div className="card shrink-0 md:w-1/2 w-2/5  shadow-2xl bg-black bg-opacity-40 blured ">
+          <div className="card shrink-0  md:w-1/2 lg:w-2/5  shadow-2xl bg-black bg-opacity-40 blured ">
             <form onSubmit={handleRegister} className="card-body">
               <h1 className="text-3xl text-center font-bold text-gray-200">
                 Register now!

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 AOS.init();
 const Estates = ({ estates }) => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <h1 className="text-3xl text-center font-bold mt-24">Estates</h1>
 
       <div>
