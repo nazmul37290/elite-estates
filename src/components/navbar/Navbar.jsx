@@ -11,13 +11,9 @@ const Navbar = () => {
         <NavLink to={"/"}>Home</NavLink>
       </li>
 
-      {user ? (
-        <li>
-          <NavLink to={"/updateProfile"}>Update profile</NavLink>
-        </li>
-      ) : (
-        ""
-      )}
+      <li>
+        <NavLink to={"/updateProfile"}>Update profile</NavLink>
+      </li>
 
       {/* <li>
         <NavLink to={"/register"}>Register</NavLink>

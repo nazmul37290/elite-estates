@@ -1,8 +1,23 @@
-# React + Vite
+# Elite Estates
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live website link [https://hero-assignment-9-80a8e.web.app/](https://hero-assignment-9-80a8e.web.app/)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Luxury Estates Collection
+- Login with email and password
+- Login with google and github
+- Update profile
+- Register for user
+
+## Characteristics
+
+This website is for luxury estates ..
+both sell and rent are available ..
+This website is responsive for all devices mobile,tablet and pc ..
+
+## npm packages
+
+- AOS Package
+- Animate.css
+- Swiper slider
